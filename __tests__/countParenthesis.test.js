@@ -1,4 +1,4 @@
-const { countWellFormedParenthesis }= require( "../countParenthesis.js");
+const { countWellFormedParenthesis } = require("../countParenthesis.js");
 
 describe("Catalan Number Calculation", () => {
   it("C(0) = 1", () => {
