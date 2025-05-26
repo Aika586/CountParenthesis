@@ -1,0 +1,16 @@
+{
+  "name": "count-parenthesis",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "countParenthesis.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node countParenthesis.js"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
