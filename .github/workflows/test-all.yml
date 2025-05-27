@@ -1,0 +1,52 @@
+name: Run All Language Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test-js:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: JS
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install
+      - run: npm test
+
+  test-python:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Python
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.13'
+      - run: python -m unittest test_countParenthesis.py
+
+  test-java:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: java
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+      - name: Build with maven
+        run: mvn -B package --file pom.xml
+      - name: Run tests
+        run: mvn test
+
+
