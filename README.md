@@ -1,24 +1,24 @@
 
-# Catalan Number Calculator in JavaScript, Python, and Java
+# Калькулятор чисел Каталана на JavaScript, Python и Java
 
-This project implements a function to compute **Catalan numbers**, which count the number of **well-formed parentheses combinations**.
+Этот проект реализует функцию для вычисления чисел Каталана, которые определяют количество правильно сформированных комбинаций скобок.
 
-## 🤔 What Are Well-Formed Parentheses?
+## 🤔 Что такое правильно сформированные скобки?
 
-Valid arrangements of parentheses where:
-- Every `(` has a corresponding `)`
-- All pairs are correctly nested
+Допустимые расстановки скобок, при которых
+- Каждая ( имеет соответствующую )
+- Все пары правильно вложены
 
-### Examples:
+### Примеры:
 - `n = 1`: `()`
 - `n = 2`: `()()`, `(())`
 - `n = 3`: `((()))`, `(()())`, `(())()`, `()(())`, `()()()`
 
-This is a classic problem often solved using **Catalan numbers**.
+Это классическая задача, которая часто решается с использованием чисел **Каталана**.
 
 ---
 
-## 📘 Catalan Number Formula
+## 📘 Формула числа Каталана
 
 \[
 C(n) = \frac{1}{n+1} \binom{2n}{n}
@@ -26,11 +26,13 @@ C(n) = \frac{1}{n+1} \binom{2n}{n}
 
 ---
 
-## 📂 Project Structure
+## 📂 Структура проекта
 
+```
 countParenthesis/
 │
-├── js/ # JavaScript implementation & tests
-├── python/ # Python implementation & tests
-├── java/ # Java implementation & tests
+├── js/       # JavaScript implementation & tests
+├── python/   # Python implementation & tests
+├── java/     # Java implementation & tests
 └── README.md
+```
