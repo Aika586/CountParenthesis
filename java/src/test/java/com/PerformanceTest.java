@@ -1,15 +1,20 @@
+package com;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
-import java.math.BigInteger;
 public class PerformanceTest {
-    public static void main(String[] args) {
+    @Test
+    void testPerformanceOfCatalanComputation() {
         long start = System.nanoTime();
-
         for (int n = 1; n <= 15; n++) {
-            BigInteger result = CatalanCalculator.countWellFormedParenthesis(n);
-            System.out.println("n=" + n + ", count=" + result);
+            CatalanCalculator.countWellFormedParenthesis(n);
         }
-
         long end = System.nanoTime();
-        System.out.printf("Total time: %.6f ms%n", (end - start) / 1e6);
+
+        double durationMs = (end - start) / 1e6;
+        System.out.printf("Catalan computation (1..15) took %.3f ms%n", durationMs);
+
+        // Можно добавить простой ассерт: например, не дольше 100ms
+        assertTrue(durationMs < 100, "Performance degraded: " + durationMs + " ms");
     }
 }
