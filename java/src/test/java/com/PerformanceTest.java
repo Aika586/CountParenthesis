@@ -12,7 +12,6 @@ public class PerformanceTest {
         long end = System.nanoTime();
 
         double durationMs = (end - start) / 1e6;
-        System.out.printf("Catalan computation (1..15) took %.3f ms%n", durationMs);
 
         // Можно добавить простой ассерт: например, не дольше 100ms
         assertTrue(durationMs < 100, "Performance degraded: " + durationMs + " ms");
