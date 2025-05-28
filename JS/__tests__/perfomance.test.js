@@ -7,8 +7,6 @@ describe("Performance tests", () => {
     const start = performance.now();
     const result = countWellFormedParenthesis(n);
     const duration = performance.now() - start;
-
-    console.log(`n=${n}, count=${result}, time=${duration.toFixed(2)}ms`);
     expect(typeof result).toBe('number');
     expect(result).toBeGreaterThan(0);
 
